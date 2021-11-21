@@ -39,24 +39,11 @@ export default function App() {
       return;
     }
     console.log(query);
-    // if (prevQuery !== newQuery) {
     console.log("запрос ізменілся");
     fetchImgOnQuery();
   }, [query]);
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   const prevQuery = prevState.query;
-  //   const newQuery = this.state.query;
-  //   const queryPage = this.state.page;
-
-  //   if (prevQuery !== newQuery) {
-  //     console.log("запрос ізменілся");
-  //     this.fetchImgOnQuery();
-  //   }
-  // }
-
   const fetchImgOnQuery = () => {
-    // const { query, page } = this.state;
     const { fetchImages } = api;
 
     if (!query) {
